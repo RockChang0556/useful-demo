@@ -25,10 +25,6 @@
       // 根据别名配置相关路径
       "@/*": ["./src/*"]
     },
-    "types": [
-      "node",
-      "vite/client"
-    ],
 
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],

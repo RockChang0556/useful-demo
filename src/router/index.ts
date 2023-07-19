@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-05 11:34:59
- * @LastEditTime: 2023-07-19 17:39:47
+ * @LastEditTime: 2023-07-19 19:18:58
  * @Description: 路由
  */
 import { createRouter, createWebHistory } from 'vue-router';
