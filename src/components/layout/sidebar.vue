@@ -1,13 +1,13 @@
 <!--
  * @Author: Rock Chang
  * @Date: 2021-08-19 17:35:11
- * @LastEditTime: 2023-07-19 15:19:06
+ * @LastEditTime: 2023-07-19 17:39:18
  * @Description: 左边菜单
 -->
 
 <template>
 	<div class="layout-sidebar">
-		<el-menu
+		<!-- <el-menu
 			ref="meun"
 			class="el-menu-vertical-demo"
 			:default-active="defaultActive"
@@ -18,7 +18,7 @@
 				:key="item.path"
 				:item="item"
 			></menu-tree>
-		</el-menu>
+		</el-menu> -->
 	</div>
 </template>
 

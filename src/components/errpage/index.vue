@@ -1,7 +1,7 @@
 <!--
  * @Author: Rock Chang
  * @Date: 2021-08-21 17:26:16
- * @LastEditTime: 2023-07-19 15:16:28
+ * @LastEditTime: 2023-07-19 17:00:45
  * @Description:  
 -->
 <template>
@@ -12,7 +12,6 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
 import GlobalHeader from '@/components/layout/header.vue';
 </script>
 

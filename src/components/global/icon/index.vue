@@ -1,7 +1,7 @@
 <!--
  * @Author: Rock Chang
  * @Date: 2021-08-08 10:25:48
- * @LastEditTime: 2021-08-08 10:36:28
+ * @LastEditTime: 2023-07-19 17:07:45
  * @Description: 
 -->
 <template>
@@ -10,24 +10,15 @@
 	</svg>
 </template>
 
-<script lang="ts">
-import { computed, defineComponent } from 'vue';
-export default defineComponent({
-	name: 'r-icon',
-	components: {},
-	props: {
-		name: {
-			require: true,
-			type: String,
-		},
-	},
-	setup(props) {
-		const iconxlink = computed(() => `#icon-${props.name}`);
-		return {
-			iconxlink,
-		};
-	},
-});
+<script lang="ts" setup>
+import { computed } from 'vue';
+const props = defineProps<{
+	name: string;
+}>();
+
+const iconxlink = computed(() => `#icon-${props.name}`);
+
 </script>
+<script lang="ts" name="r-icon"></script>
 
 <style lang="less"></style>
