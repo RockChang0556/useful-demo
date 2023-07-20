@@ -1,0 +1,1 @@
+import{a1 as e,q as s,t as c}from"./index-bd0fd53a.js";const t={},n={class:"defaults"};function o(r,a){return s(),c("div",n," src/views/css/index.vue ")}const d=e(t,[["render",o]]);export{d as default};
