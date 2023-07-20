@@ -6,12 +6,12 @@
  */
 
 export const componentsRouteConf = [
-	// {
-	// 	title: '用户设置',
-	// 	type: 'view', // 菜单类别 folder-文件夹 view-菜单项
-	// 	routeName: 'user-settings',
-	// 	routePath: '/user/settings',
-	// 	filePath: 'views/user/settings/index.vue',
-	// 	icon: 'iconfont icon-tushuguanli',
-	// },
+	{
+		title: '组件',
+		type: 'view', // 菜单类别 folder-文件夹 view-菜单项
+		routeName: 'components',
+		routePath: '/components',
+		filePath: 'views/components/index.vue',
+		icon: 'iconfont icon-tushuguanli',
+	},
 ];

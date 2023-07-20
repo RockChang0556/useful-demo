@@ -7,17 +7,14 @@
 
 <template>
 	<div class="errpage-403">
-		你还没有此页面的权限哦
-		<!-- <el-empty description="你还没有此页面的权限哦">
+		<el-empty description="你还没有此页面的权限哦">
 			<router-link to="/">
 				<el-button type="primary">回到首页</el-button>
 			</router-link>
-		</el-empty> -->
+		</el-empty>
 	</div>
 </template>
 
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <style lang="less"></style>
-

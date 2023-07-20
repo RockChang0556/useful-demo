@@ -1,25 +1,32 @@
 <!--
  * @Author: Rock Chang
  * @Date: 2021-08-19 17:43:53
- * @LastEditTime: 2021-08-19 18:53:15
- * @Description: 管理页面 - 左边菜单 -菜单树组件, 递归调用自己
+ * @LastEditTime: 2023-07-20 11:42:42
+ * @Description: 左边菜单 -菜单树组件, 递归调用自己
 -->
 
 <template>
-	<el-submenu
-		v-if="item.children?.length > 0"
-		:index="item.path"
-		popper-append-to-body
+	<el-sub-menu
+		v-if="item.children && item.children?.length > 0"
+		:index="item.routePath"
 	>
 		<template #title>
 			<i v-if="!filterIcon(item.icon)" :class="item.icon"></i>
 			<img v-else :src="item.icon" class="img-icon" />
 			<span>{{ item.title }}</span>
 		</template>
-		<menu-tree v-for="child in item.children" :key="child.path" :item="child" />
-	</el-submenu>
+		<menu-tree
+			v-for="child in item.children"
+			:key="child.routePath"
+			:item="child"
+		/>
+	</el-sub-menu>
 
-	<el-menu-item v-else :index="item.path" @click="navigateTo(item.path)">
+	<el-menu-item
+		v-else
+		:index="item.routePath"
+		@click="navigateTo(item.routePath)"
+	>
 		<i v-if="!filterIcon(item.icon)" :class="item.icon"></i>
 		<img v-else :src="item.icon" class="img-icon" />
 		<template #title>
@@ -28,30 +35,27 @@
 	</el-menu-item>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
+import { IRouteConf } from '@/types/type';
 import { useRouter } from 'vue-router';
-export default defineComponent({
-	name: 'layout-menu-tree',
-	components: {},
-	props: {
-		item: {
-			type: Object,
-			required: true,
-		},
-	},
-	setup() {
-		const router = useRouter();
-		const navigateTo = (path: string) => {
-			router.push({ path });
-		};
-		const filterIcon = (icon: string) => {
-			return icon.indexOf('/') !== -1;
-		};
-		return { navigateTo, filterIcon };
-	},
-});
+
+defineProps<{
+	item: IRouteConf;
+}>();
+
+const router = useRouter();
+const navigateTo = (path: string) => {
+	router.push({ path });
+};
+const filterIcon = (icon: string) => {
+	return icon.indexOf('/') !== -1;
+};
+</script>
+
+<script lang="ts">
+export default {
+	name: 'menu-tree',
+};
 </script>
 
 <style lang="less"></style>
-

@@ -7,8 +7,16 @@
 
 export const cssRouteConf = [
 	{
-		title: 'css 2',
+		title: 'css 1',
 		type: 'view', // 菜单类别 folder-文件夹 view-菜单项
+		routeName: 'css-home',
+		routePath: '/css',
+		filePath: 'views/css/index.vue',
+		icon: 'iconfont icon-tushuguanli',
+	},
+	{
+		title: 'css 2',
+		type: 'view',
 		routeName: 'css-css2',
 		routePath: '/css/css2',
 		filePath: 'views/css/css2.vue',

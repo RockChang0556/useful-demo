@@ -1,7 +1,7 @@
 <!--
  * @Author: Rock Chang
  * @Date: 2021-08-05 14:50:24
- * @LastEditTime: 2023-07-19 15:17:55
+ * @LastEditTime: 2023-07-20 12:07:55
  * @Description: 布局组件 - 头部
 -->
 <template>
@@ -9,10 +9,30 @@
 		<router-link class="header-logo" to="/">
 			<img src="/logo.png" alt="logo" />
 		</router-link>
+
+		<div class="header-menu">
+			<router-link
+				v-for="v in headerMenu"
+				:key="v.name"
+				:to="v.path"
+				:class="{ active: routeType === v.name }"
+			>
+				{{ v.name }}
+			</router-link>
+		</div>
 	</div>
 </template>
 
 <script lang="ts" setup>
+import { computed } from 'vue';
+import { headerMenu } from '@/constants/layout';
+import { TallRouteConf } from '@/router/routes';
+import { useRoute } from 'vue-router';
+const route = useRoute();
+
+const routeType = computed(() => {
+	return route.name?.toString().split('-')[0] as TallRouteConf;
+});
 </script>
 
 <style lang="less">
@@ -36,36 +56,14 @@
 			height: 100%;
 		}
 	}
-	.el-button span {
-		letter-spacing: 5px;
-		padding-left: 4px;
-	}
-	.el-dropdown {
-		min-width: 80px;
-		padding: 5px 0;
-		.el-dropdown-link {
-			float: right;
-			cursor: pointer;
-			display: flex;
-			align-items: flex-end;
-			line-height: 26px;
-			.el-icon-arrow-down {
-				line-height: inherit;
+	.header-menu {
+		a {
+			color: #000;
+			font-size: 20px;
+			padding: 10px;
+			&.active {
+				color: blue;
 			}
-			.el-avatar {
-				margin-right: 5px;
-			}
-		}
-	}
-}
-
-// element
-.header-user-dropdown {
-	a {
-		color: var(--el-text-color-regular);
-		&:hover {
-			background-color: var(--el-dropdown-menuItem-hover-fill);
-			color: var(--el-dropdown-menuItem-hover-color);
 		}
 	}
 }

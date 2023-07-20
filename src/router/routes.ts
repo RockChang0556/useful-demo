@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:59:50
- * @LastEditTime: 2023-07-19 16:52:36
+ * @LastEditTime: 2023-07-20 11:31:30
  * @Description: 整合所有路由
  */
 
@@ -13,27 +13,20 @@ import { componentsRouteConf } from './route-components';
 const cssRoutes = formatRoutes(cssRouteConf);
 const componentsRoutes = formatRoutes(componentsRouteConf);
 
+export const allRouteConf = {
+	css: cssRouteConf,
+	components: componentsRouteConf,
+};
+
+export type TallRouteConf = keyof typeof allRouteConf;
+
 const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/',
 		name: 'home',
 		component: () => import('@/views/home/home.vue'),
 		redirect: { name: 'css' },
-		children: [
-			{
-				path: '/css',
-				name: 'css',
-				component: () => import('@/views/css/index.vue'),
-			},
-			...cssRoutes,
-			{
-				path: '/components',
-				name: 'components',
-				component: () => import('@/views/components/index.vue'),
-				meta: { title: '组件' },
-			},
-			...componentsRoutes
-		]
+		children: [...cssRoutes, ...componentsRoutes],
 	},
 	{
 		path: '/err',
