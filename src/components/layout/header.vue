@@ -1,7 +1,7 @@
 <!--
  * @Author: Rock Chang
  * @Date: 2021-08-05 14:50:24
- * @LastEditTime: 2023-07-20 12:07:55
+ * @LastEditTime: 2023-07-21 15:07:15
  * @Description: 布局组件 - 头部
 -->
 <template>
@@ -50,6 +50,7 @@ const routeType = computed(() => {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border-bottom: 1px solid #ccc;
 	.header-logo {
 		height: 50px;
 		img {

@@ -25,7 +25,7 @@ const routes: Array<RouteRecordRaw> = [
 		path: '/',
 		name: 'home',
 		component: () => import('@/views/home/home.vue'),
-		redirect: { name: 'css' },
+		redirect: { name: 'css-home' },
 		children: [...cssRoutes, ...componentsRoutes],
 	},
 	{

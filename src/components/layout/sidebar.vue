@@ -1,29 +1,27 @@
 <!--
  * @Author: Rock Chang
  * @Date: 2021-08-19 17:35:11
- * @LastEditTime: 2023-07-20 11:33:21
+ * @LastEditTime: 2023-07-21 15:06:42
  * @Description: 左边菜单
 -->
 
 <template>
-	<div class="layout-sidebar">
-		<el-menu
-			ref="meun"
-			class="el-menu-vertical-demo"
-			:default-active="defaultActive"
-			:collapse="false"
-		>
-			<menu-tree
-				v-for="item in sideList"
-				:key="item.filePath"
-				:item="item"
-			></menu-tree>
-		</el-menu>
-	</div>
+	<el-menu
+		ref="meun"
+		class="el-menu-vertical-demo"
+		:default-active="defaultActive"
+		:collapse="isCollapse"
+	>
+		<menu-tree
+			v-for="item in sideList"
+			:key="item.filePath"
+			:item="item"
+		></menu-tree>
+	</el-menu>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { allRouteConf, TallRouteConf } from '@/router/routes';
 import MenuTree from './menu-tree.vue';
 import { useRoute } from 'vue-router';
@@ -39,21 +37,13 @@ const sideList = computed(() => {
 		return [];
 	}
 });
-console.log('[ defaultActive ]', sideList);
 
-// const sideList = ref();
-// export default defineComponent({
-// 	name: 'layout-sidebar',
-// 	components: { MenuTree },
-// 	props: {},
-// 	setup() {
-// 		const store = useStore();
-// 		// 当前选中
-// 		// 菜单树
-// 		const sideList = computed(() => store.getters['route/sideList']);
-// 		return { sideList, defaultActive };
-// 	},
-// });
+const isCollapse = ref(false);
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+	width: 200px;
+	min-height: calc(100vh - 70px);
+}
+</style>
