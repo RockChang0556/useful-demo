@@ -1,1 +1,0 @@
-import"./base-3dc385cc.js";import{E as o}from"./el-button-4a5b962f.js";import{a1 as s,q as c,t as a,B as n,E as r,X as t}from"./index-bd0fd53a.js";const _={},l={class:"defaults"};function d(f,i){const e=o;return c(),a("div",l,[n(e,null,{default:r(()=>[t("123123")]),_:1}),t(" css1 ")])}const x=s(_,[["render",d]]);export{x as default};

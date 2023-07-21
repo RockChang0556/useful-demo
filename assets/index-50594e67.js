@@ -1,1 +1,0 @@
-import{_ as t}from"./header.vue_vue_type_style_index_0_lang-91d3ed71.js";import{l as _,V as n,q as r,t as s,B as e}from"./index-bd0fd53a.js";const a={class:"errpage-wrap"},d=_({__name:"index",setup(c){return(p,i)=>{const o=n("router-view");return r(),s("div",a,[e(t),e(o)])}}});export{d as default};
