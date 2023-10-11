@@ -1,8 +1,8 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:35:15
- * @LastEditTime: 2023-07-19 16:44:07
- * @Description: 管理员相关路由配置文件
+ * @LastEditTime: 2023-10-11 11:35:59
+ * @Description: 组件相关路由配置文件
  */
 
 export const componentsRouteConf = [

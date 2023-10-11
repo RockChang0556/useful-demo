@@ -25,7 +25,7 @@ export const cssRouteConf = [
 	{
 		title: 'css3',
 		type: 'folder',
-		routeName: 'css-css2',
+		routeName: 'css-css3-home',
 		routePath: '/css/css2',
 		filePath: 'views/css/',
 		icon: 'iconfont icon-tushuguanli',

@@ -1,7 +1,7 @@
 <!--
  * @Author: Rock Chang
  * @Date: 2021-08-19 17:35:11
- * @LastEditTime: 2023-07-21 15:06:42
+ * @LastEditTime: 2023-07-28 17:54:17
  * @Description: 左边菜单
 -->
 
@@ -14,7 +14,7 @@
 	>
 		<menu-tree
 			v-for="item in sideList"
-			:key="item.filePath"
+			:key="item.routeName"
 			:item="item"
 		></menu-tree>
 	</el-menu>
@@ -27,7 +27,7 @@ import MenuTree from './menu-tree.vue';
 import { useRoute } from 'vue-router';
 const route = useRoute();
 
-const defaultActive = computed(() => route.path);
+const defaultActive = computed(() => route.name);
 
 const sideList = computed(() => {
 	const type = route.name?.toString().split('-')[0] as TallRouteConf;

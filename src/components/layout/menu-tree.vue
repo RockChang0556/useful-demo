@@ -8,7 +8,7 @@
 <template>
 	<el-sub-menu
 		v-if="item.children && item.children?.length > 0"
-		:index="item.routePath"
+		:index="item.routeName"
 	>
 		<template #title>
 			<i v-if="!filterIcon(item.icon)" :class="item.icon"></i>
@@ -24,8 +24,8 @@
 
 	<el-menu-item
 		v-else
-		:index="item.routePath"
-		@click="navigateTo(item.routePath)"
+		:index="item.routeName"
+		@click="navigateTo(item.routeName)"
 	>
 		<i v-if="!filterIcon(item.icon)" :class="item.icon"></i>
 		<img v-else :src="item.icon" class="img-icon" />
@@ -45,7 +45,7 @@ defineProps<{
 
 const router = useRouter();
 const navigateTo = (path: string) => {
-	router.push({ path });
+	router.push({ name: path });
 };
 const filterIcon = (icon: string) => {
 	return icon.indexOf('/') !== -1;
