@@ -1,7 +1,7 @@
 <!--
  * @Author: Rock Chang
  * @Date: 2021-08-05 14:50:24
- * @LastEditTime: 2023-07-21 15:07:15
+ * @LastEditTime: 2023-10-19 00:13:20
  * @Description: 布局组件 - 头部
 -->
 <template>
@@ -12,7 +12,7 @@
 
 		<div class="header-menu">
 			<router-link
-				v-for="v in headerMenu"
+				v-for="v in HEAD_MENU"
 				:key="v.name"
 				:to="v.path"
 				:class="{ active: routeType === v.name }"
@@ -25,7 +25,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { headerMenu } from '@/constants/layout';
+import { HEAD_MENU } from '@/constants/layout';
 import { TallRouteConf } from '@/router/routes';
 import { useRoute } from 'vue-router';
 const route = useRoute();
