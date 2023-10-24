@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:35:15
- * @LastEditTime: 2023-10-19 00:20:12
+ * @LastEditTime: 2023-10-24 23:37:17
  * @Description: CSS 相关路由配置文件
  * 
  * 	title: 'css 1', // 标题
@@ -14,11 +14,11 @@
 
 export const cssRouteConf = [
 	{
-		title: 'css 1',
-		type: 'view', // 菜单类别 folder-文件夹 view-菜单项
-		routeName: 'css-home',
+		title: '利用延迟实现复杂动画',
+		type: 'view',
+		routeName: 'css-delayAnimation',
 		routePath: '/css',
-		filePath: 'views/css/index.vue',
+		filePath: 'views/css/delayAnimation.vue',
 		icon: 'iconfont icon-tushuguanli',
 	},
 	{
