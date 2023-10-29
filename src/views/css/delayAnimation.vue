@@ -1,20 +1,27 @@
 <template>
-	<div class="cssDelayAnimation">
-		<div class="left">
-			<div class="roll" ref="rollRef"><span></span></div>
-			<el-slider
-				v-model="sliderVal"
-				:min="0"
-				:max="1"
-				:step="0.01"
-				:show-tooltip="false"
-				@input="onChangeSlider"
-			/>
+	<div class="content">
+		<v-md-preview
+			:text="`
+> 通过进度条控制动画时间轴, 来改变动画位置, 从而实现动画随着进度条改变的效果
+
+::: tip
+- 动画时间轴
+:::
+`"
+		/>
+		<div class="cssDelayAnimation">
+			<div class="left">
+				<div class="roll" ref="rollRef"><span></span></div>
+				<el-slider
+					v-model="sliderVal"
+					:min="0"
+					:max="1"
+					:step="0.01"
+					:show-tooltip="false"
+					@input="onChangeSlider"
+				/>
+			</div>
 		</div>
-		<pre>
-	通过进度条控制动画时间轴, 来改变动画位置, 从而实现动画随着进度条改变的效果
-	</pre
-		>
 	</div>
 </template>
 

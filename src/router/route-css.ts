@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:35:15
- * @LastEditTime: 2023-10-24 23:37:17
+ * @LastEditTime: 2023-10-30 00:01:32
  * @Description: CSS 相关路由配置文件
  * 
  * 	title: 'css 1', // 标题
@@ -22,27 +22,19 @@ export const cssRouteConf = [
 		icon: 'iconfont icon-tushuguanli',
 	},
 	{
-		title: 'css 2',
-		type: 'view',
-		routeName: 'css-css2',
-		routePath: '/css/css2',
-		filePath: 'views/css/css2.vue',
-		icon: 'iconfont icon-tushuguanli',
-	},
-	{
-		title: 'css3',
+		title: 'Canvas',
 		type: 'folder',
-		routeName: 'css-css3-home',
-		routePath: '/css/css2',
-		filePath: 'views/css/',
+		routeName: 'css-canvas',
+		routePath: '/css/canvasTime',
+		filePath: '',
 		icon: 'iconfont icon-tushuguanli',
 		children: [
 			{
-				title: '用户列表',
+				title: 'Canvas粒子时钟',
 				type: 'view',
-				routeName: 'css-css3',
-				routePath: '/css/css3',
-				filePath: 'views/css/css3.vue',
+				routeName: 'css-canvasTime',
+				routePath: '/css/canvasTime',
+				filePath: 'views/css/canvasTime.vue',
 				icon: 'iconfont icon-tushuguanli',
 			},
 			{

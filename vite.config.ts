@@ -19,6 +19,9 @@ export default ({ mode }) => {
 				resolvers: [ElementPlusResolver()],
 			}),
 		],
+		optimizeDeps: {
+			include: ['@kangc/v-md-editor/lib/theme/vuepress.js'],
+		},
 		resolve: {
 			alias: {
 				'@': resolve(__dirname, 'src'),
