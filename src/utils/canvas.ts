@@ -79,13 +79,20 @@ export class Particle {
 }
 
 interface ICanvasConf {
+	/** 画布宽度 */
 	width: number;
+	/** 画布高度 */
 	height: number;
+	/** 粒子颜色 */
 	color: string;
+	/** 文字字体 */
 	fontFamily: string;
+	/** 文字字体大小 */
 	fontSize: number;
+	/** 粒子密度 */
 	gap: number;
-	particSize: number[];
+	/** 粒子大小 [min, max] */
+	particSize: [number, number];
 }
 
 /** 画布 */
@@ -130,7 +137,7 @@ export class Canvas {
 	}
 
 	/** 绘制
-	 * @param {string | Function} text 要绘制的内容: 参数是字符串, 则只绘制一次, 参数是函数, 则调用 requestAnimationFrame
+	 * @param {string | Function} text 要绘制的内容 -- 若参数是字符串, 则只绘制一次, 若参数是函数, 则调用 requestAnimationFrame 继续绘制
 	 * @return {*}
 	 */
 	draw(text: string | Function) {

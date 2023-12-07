@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:59:50
- * @LastEditTime: 2023-07-20 11:31:30
+ * @LastEditTime: 2023-11-21 10:32:26
  * @Description: 整合所有路由
  */
 
@@ -25,7 +25,7 @@ const routes: Array<RouteRecordRaw> = [
 		path: '/',
 		name: 'home',
 		component: () => import('@/views/home/home.vue'),
-		redirect: { name: 'css-home' },
+		redirect: { name: 'css-delayAnimation' },
 		children: [...cssRoutes, ...componentsRoutes],
 	},
 	{
