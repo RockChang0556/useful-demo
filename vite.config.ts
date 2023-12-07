@@ -34,6 +34,7 @@ export default ({ mode }) => {
 			// assetsDir: 'assets', // 指定生成静态资源的存放路径
 		},
 		server: {
+			host: true,
 			port: 8000,
 			cors: true, // 默认启用并允许任何源
 			// open: true, // 在服务器启动时自动在浏览器中打开应用程序

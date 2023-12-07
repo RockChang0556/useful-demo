@@ -2,13 +2,40 @@
 	<div class="content">
 		<v-md-preview
 			:text="`
-> 通过进度条控制动画时间轴, 来改变动画位置, 从而实现动画随着进度条改变的效果
+> canvas 粒子绘画
 `"
 		/>
-		<div class="canvasTime">css2</div>
+		<div class="canvasTime">
+			<h2>粒子绘画时钟</h2>
+			<canvas ref="canvasRef"></canvas>
+		</div>
 	</div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { onMounted, ref } from 'vue';
+import { Canvas } from '@/utils/canvas';
 
-<style lang="less"></style>
+const canvasRef = ref<HTMLCanvasElement>();
+
+/** 获取canvas要画的文字内容 */
+const getText = () => {
+	return new Date().toTimeString().substring(0, 8);
+};
+
+onMounted(() => {
+	const canvas = new Canvas(canvasRef.value, {
+		width: 500,
+		height: 200,
+		fontFamily: 'PCMyungjo',
+	});
+	canvas.draw(getText);
+});
+</script>
+
+<style lang="less" scoped>
+.canvasTime canvas {
+	width: 500px;
+	height: 200px;
+}
+</style>
