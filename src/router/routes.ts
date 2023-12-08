@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:59:50
- * @LastEditTime: 2023-11-21 10:32:26
+ * @LastEditTime: 2023-12-07 20:02:10
  * @Description: 整合所有路由
  */
 
@@ -9,13 +9,16 @@ import { RouteRecordRaw } from 'vue-router';
 import { formatRoutes } from '@/utils/route';
 import { cssRouteConf } from './route-css';
 import { componentsRouteConf } from './route-components';
+import { utilsRouteConf } from './route-utils';
 
 const cssRoutes = formatRoutes(cssRouteConf);
 const componentsRoutes = formatRoutes(componentsRouteConf);
+const utilsRoutes = formatRoutes(utilsRouteConf);
 
 export const allRouteConf = {
 	css: cssRouteConf,
 	components: componentsRouteConf,
+	utils: utilsRouteConf,
 };
 
 export type TallRouteConf = keyof typeof allRouteConf;
@@ -26,7 +29,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'home',
 		component: () => import('@/views/home/home.vue'),
 		redirect: { name: 'css-delayAnimation' },
-		children: [...cssRoutes, ...componentsRoutes],
+		children: [...cssRoutes, ...componentsRoutes, ...utilsRoutes],
 	},
 	{
 		path: '/err',
