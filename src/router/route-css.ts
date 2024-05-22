@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:35:15
- * @LastEditTime: 2024-05-19 18:16:32
+ * @LastEditTime: 2024-05-22 22:13:18
  * @Description: CSS 相关路由配置文件
  * 
  * 	title: 'css 1', // 标题
@@ -18,10 +18,11 @@ export const cssRouteConf = [
 		type: 'folder',
 		routeName: 'css-canvas',
 		routePath: '/css/canvasTime',
+		// icon: 'iconfont icon-tushuguanli',
 		filePath: '',
 		children: [
 			{
-				title: 'Canvas粒子时钟',
+				title: '粒子时钟',
 				type: 'view',
 				routeName: 'css-canvasTime',
 				routePath: '/css/canvasTime',
@@ -30,12 +31,26 @@ export const cssRouteConf = [
 		],
 	},
 	{
+		title: '奇淫技巧',
+		type: 'folder',
+		routeName: 'css-skills',
+		filePath: '',
+		children: [
+			{
+				title: '渐变阴影',
+				type: 'view',
+				routeName: 'css-gradientShadow',
+				routePath: '/css/gradientShadow',
+				filePath: 'views/css/gradientShadow.vue',
+			},
+		],
+	},
+	{
 		title: '纯 CSS 实现动画',
 		type: 'folder',
 		routeName: 'css-cssAnimation',
-		routePath: '/css/canvasTime',
+		// routePath: '/css/canvasTime',
 		filePath: '',
-		// icon: 'iconfont icon-tushuguanli',
 		children: [
 			{
 				title: '动画延迟实现复杂动画',

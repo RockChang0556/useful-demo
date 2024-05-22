@@ -50,7 +50,7 @@ function draw(dom: HTMLDivElement) {
 	}, 20);
 }
 
-function createTracks(x, y) {
+function createTracks(x: number, y: number) {
 	var ele = document.createElement('div');
 	ele.className = 'track';
 	ele.style.left = x + 'px';
