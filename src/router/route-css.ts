@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:35:15
- * @LastEditTime: 2024-05-22 22:17:14
+ * @LastEditTime: 2024-05-22 23:31:24
  * @Description: CSS 相关路由配置文件
  * 
  * 	title: 'css 1', // 标题
@@ -17,15 +17,15 @@ export const cssRouteConf = [
 		title: 'Canvas',
 		type: 'folder',
 		routeName: 'css-canvas',
-		routePath: '/css/canvasTime',
+		routePath: '/css',
 		// icon: 'iconfont icon-tushuguanli',
-		filePath: '',
+		// filePath: '',
 		children: [
 			{
 				title: '粒子时钟',
 				type: 'view',
 				routeName: 'css-canvasTime',
-				routePath: '/css/canvasTime',
+				routePath: '/css',
 				filePath: 'views/css/canvasTime.vue',
 			},
 			{
@@ -56,7 +56,6 @@ export const cssRouteConf = [
 		title: '纯 CSS 实现动画',
 		type: 'folder',
 		routeName: 'css-cssAnimation',
-		// routePath: '/css/canvasTime',
 		filePath: '',
 		children: [
 			{
