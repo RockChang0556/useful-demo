@@ -4,6 +4,6 @@ export interface IRouteConf {
 	routeName: string;
 	routePath: string;
 	filePath: string;
-	icon: string;
+	icon?: string;
 	children?: IRouteConf[];
 }

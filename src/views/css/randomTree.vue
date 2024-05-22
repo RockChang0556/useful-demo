@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhang Peng
  * @Date: 2024-05-22 22:15:03
- * @LastEditTime: 2024-05-22 22:45:59
+ * @LastEditTime: 2024-05-22 23:50:09
  * @Description: 随机树
 -->
 <template>
@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, Ref } from 'vue';
+import { ref, onMounted } from 'vue';
 const canvasRef = ref<HTMLCanvasElement | null>(null);
 let ctx: CanvasRenderingContext2D | null = null;
 
