@@ -1,7 +1,7 @@
 <!--
  * @Author: Rock Chang
  * @Date: 2021-08-19 17:35:11
- * @LastEditTime: 2023-07-28 17:54:17
+ * @LastEditTime: 2024-05-22 23:49:08
  * @Description: 左边菜单
 -->
 
@@ -29,7 +29,7 @@ const route = useRoute();
 
 const defaultActive = computed(() => route.name);
 
-const sideList = computed(() => {
+const sideList: any = computed(() => {
 	const type = route.name?.toString().split('-')[0] as TallRouteConf;
 	if (type) {
 		return allRouteConf[type];

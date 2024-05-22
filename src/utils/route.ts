@@ -1,9 +1,12 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 14:22:35
- * @LastEditTime: 2024-05-22 23:31:37
+ * @LastEditTime: 2024-05-22 23:48:16
  * @Description: 根据配置文件生成路由
  */
+
+import { RouteRecordRaw } from 'vue-router';
+
 // 引入所有views下.vue文件
 const modules = import.meta.glob('../views/**/**.vue');
 /**
@@ -29,7 +32,7 @@ function deepTravel(config: any, fuc: any) {
  * @param {any} configs
  * @return {*}
  */
-export function formatRoutes(configs: any) {
+export function formatRoutes(configs: any): RouteRecordRaw[] {
 	let routes: any = [];
 	/**
 	 * 构造舞台view路由
