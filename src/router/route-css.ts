@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:35:15
- * @LastEditTime: 2024-05-22 22:13:18
+ * @LastEditTime: 2024-05-22 22:17:14
  * @Description: CSS 相关路由配置文件
  * 
  * 	title: 'css 1', // 标题
@@ -27,6 +27,13 @@ export const cssRouteConf = [
 				routeName: 'css-canvasTime',
 				routePath: '/css/canvasTime',
 				filePath: 'views/css/canvasTime.vue',
+			},
+			{
+				title: '随机树',
+				type: 'view',
+				routeName: 'css-randomTree',
+				routePath: '/css/randomTree',
+				filePath: 'views/css/randomTree.vue',
 			},
 		],
 	},
