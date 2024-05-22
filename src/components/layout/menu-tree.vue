@@ -1,7 +1,7 @@
 <!--
  * @Author: Rock Chang
  * @Date: 2021-08-19 17:43:53
- * @LastEditTime: 2023-07-20 11:42:42
+ * @LastEditTime: 2024-05-19 18:13:30
  * @Description: 左边菜单 -菜单树组件, 递归调用自己
 -->
 
@@ -47,8 +47,8 @@ const router = useRouter();
 const navigateTo = (path: string) => {
 	router.push({ name: path });
 };
-const filterIcon = (icon: string) => {
-	return icon.indexOf('/') !== -1;
+const filterIcon = (icon?: string) => {
+	return icon?.indexOf('/') !== -1;
 };
 </script>
 

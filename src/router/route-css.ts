@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:35:15
- * @LastEditTime: 2023-10-30 00:01:32
+ * @LastEditTime: 2024-05-22 23:31:24
  * @Description: CSS 相关路由配置文件
  * 
  * 	title: 'css 1', // 标题
@@ -14,36 +14,63 @@
 
 export const cssRouteConf = [
 	{
-		title: '利用延迟实现复杂动画',
-		type: 'view',
-		routeName: 'css-delayAnimation',
-		routePath: '/css',
-		filePath: 'views/css/delayAnimation.vue',
-		icon: 'iconfont icon-tushuguanli',
-	},
-	{
 		title: 'Canvas',
 		type: 'folder',
 		routeName: 'css-canvas',
-		routePath: '/css/canvasTime',
-		filePath: '',
-		icon: 'iconfont icon-tushuguanli',
+		routePath: '/css',
+		// icon: 'iconfont icon-tushuguanli',
+		// filePath: '',
 		children: [
 			{
-				title: 'Canvas粒子时钟',
+				title: '粒子时钟',
 				type: 'view',
 				routeName: 'css-canvasTime',
-				routePath: '/css/canvasTime',
+				routePath: '/css',
 				filePath: 'views/css/canvasTime.vue',
-				icon: 'iconfont icon-tushuguanli',
 			},
 			{
-				title: '用户列表2',
+				title: '随机树',
 				type: 'view',
-				routeName: 'css-css4',
-				routePath: '/css/css4',
-				filePath: 'views/css/css4.vue',
-				icon: 'iconfont icon-tushuguanli',
+				routeName: 'css-randomTree',
+				routePath: '/css/randomTree',
+				filePath: 'views/css/randomTree.vue',
+			},
+		],
+	},
+	{
+		title: '奇淫技巧',
+		type: 'folder',
+		routeName: 'css-skills',
+		filePath: '',
+		children: [
+			{
+				title: '渐变阴影',
+				type: 'view',
+				routeName: 'css-gradientShadow',
+				routePath: '/css/gradientShadow',
+				filePath: 'views/css/gradientShadow.vue',
+			},
+		],
+	},
+	{
+		title: '纯 CSS 实现动画',
+		type: 'folder',
+		routeName: 'css-cssAnimation',
+		filePath: '',
+		children: [
+			{
+				title: '动画延迟实现复杂动画',
+				type: 'view',
+				routeName: 'css-delayAnimation',
+				routePath: '/css/delayAnimation',
+				filePath: 'views/css/delayAnimation.vue',
+			},
+			{
+				title: '贝塞尔曲线实现复杂动画',
+				type: 'view',
+				routeName: 'css-bezier',
+				routePath: '/css/bezier',
+				filePath: 'views/css/bezier.vue',
 			},
 		],
 	},

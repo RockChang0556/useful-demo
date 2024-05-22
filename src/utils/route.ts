@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 14:22:35
- * @LastEditTime: 2021-08-22 14:54:36
+ * @LastEditTime: 2024-05-22 23:31:37
  * @Description: 根据配置文件生成路由
  */
 // 引入所有views下.vue文件
@@ -36,6 +36,7 @@ export function formatRoutes(configs: any) {
 	 */
 	deepTravel(configs, (viewConfig: any) => {
 		const viewRouter: any = {};
+
 		viewRouter.path = viewConfig.routePath;
 		viewRouter.name = viewConfig.routeName;
 		// webpack写法, 开发模式OK, 生产模式GG

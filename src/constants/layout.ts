@@ -2,4 +2,5 @@
 export const HEAD_MENU = [
 	{ name: 'css', path: '/css' },
 	{ name: 'components', path: '/components' },
+	{ name: 'utils', path: '/utils' },
 ];
