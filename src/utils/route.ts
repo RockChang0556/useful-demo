@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 14:22:35
- * @LastEditTime: 2024-05-22 23:48:16
+ * @LastEditTime: 2024-05-26 09:26:12
  * @Description: 根据配置文件生成路由
  */
 
@@ -44,7 +44,9 @@ export function formatRoutes(configs: any): RouteRecordRaw[] {
 		viewRouter.name = viewConfig.routeName;
 		// webpack写法, 开发模式OK, 生产模式GG
 		// viewRouter.component = () => import(`../${viewConfig.filePath}`);
-		viewRouter.component = modules[`../${viewConfig.filePath}`];
+		if (viewConfig.filePath) {
+			viewRouter.component = modules[`../${viewConfig.filePath}`];
+		}
 		viewRouter.meta = {
 			title: viewConfig.title,
 			icon: viewConfig.icon,

@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:59:50
- * @LastEditTime: 2024-05-19 18:07:43
+ * @LastEditTime: 2024-05-26 09:30:09
  * @Description: 整合所有路由
  */
 
@@ -14,6 +14,8 @@ import { utilsRouteConf } from './route-utils';
 const cssRoutes = formatRoutes(cssRouteConf);
 const componentsRoutes = formatRoutes(componentsRouteConf);
 const utilsRoutes = formatRoutes(utilsRouteConf);
+
+console.log('[ rock-routes ]', { cssRoutes, componentsRoutes, utilsRoutes });
 
 export const allRouteConf = {
 	css: cssRouteConf,

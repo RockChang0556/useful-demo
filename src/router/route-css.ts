@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:35:15
- * @LastEditTime: 2024-05-22 23:31:24
+ * @LastEditTime: 2024-05-26 09:25:33
  * @Description: CSS 相关路由配置文件
  * 
  * 	title: 'css 1', // 标题
@@ -19,7 +19,7 @@ export const cssRouteConf = [
 		routeName: 'css-canvas',
 		routePath: '/css',
 		// icon: 'iconfont icon-tushuguanli',
-		// filePath: '',
+		filePath: '',
 		children: [
 			{
 				title: '粒子时钟',
