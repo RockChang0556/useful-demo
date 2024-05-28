@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:35:15
- * @LastEditTime: 2023-12-07 19:58:15
+ * @LastEditTime: 2024-05-28 15:42:00
  * @Description: 工具类相关路由配置文件
  */
 
@@ -14,12 +14,12 @@ export const utilsRouteConf = [
 		filePath: 'views/utils/index.vue',
 		icon: 'iconfont icon-tushuguanli',
 	},
-	{
-		title: 'html2canvas',
-		type: 'view',
-		routeName: 'utils-html2canvas',
-		routePath: '/utils/html2canvas',
-		filePath: 'views/utils/html2canvas.vue',
-		icon: 'iconfont icon-tushuguanli',
-	},
+	// {
+	// 	title: 'html2canvas',
+	// 	type: 'view',
+	// 	routeName: 'utils-html2canvas',
+	// 	routePath: '/utils/html2canvas',
+	// 	filePath: 'views/utils/html2canvas.vue',
+	// 	icon: 'iconfont icon-tushuguanli',
+	// },
 ];
