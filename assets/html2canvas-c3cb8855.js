@@ -1,0 +1,1 @@
+import{d as t,G as n,o,f as s,O as _}from"./index-fda072de.js";const a={class:"html2canvas"},l=t({__name:"html2canvas",setup(c){return(m,r)=>{const e=n("v-md-preview");return o(),s("div",a,[_(e,{text:""})])}}});export{l as default};
