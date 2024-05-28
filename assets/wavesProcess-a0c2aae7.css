@@ -1,0 +1,1 @@
+.wavesProcess .content{--width: 100px;--height: 100px;width:200px}.wavesProcess .content .roll{width:var(--width);height:var(--height);background:#ccc;border-radius:50%}.wavesProcess .content .roll:before{content:"";width:200px}
