@@ -32,8 +32,8 @@ jobs:
       # 执行npm脚本打包项目
       - name: Install and Build
         run: |
-          yarn install
-          npm run build
+          yarn
+          yarn build
 
       # 发布
       - name: Deploy
