@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2021-08-19 02:59:50
- * @LastEditTime: 2024-05-26 10:57:44
+ * @LastEditTime: 2024-05-26 23:15:42
  * @Description: 整合所有路由
  */
 
@@ -20,7 +20,7 @@ console.log('[ rock-routes ]', { cssRoutes, componentsRoutes, utilsRoutes });
 export const allRouteConf = {
 	css: cssRouteConf,
 	components: componentsRouteConf,
-	// utils: utilsRouteConf,
+	utils: utilsRouteConf,
 };
 
 export type TallRouteConf = keyof typeof allRouteConf;
@@ -31,7 +31,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'home',
 		component: () => import('@/views/home/home.vue'),
 		redirect: { name: 'css-canvasTime' },
-		children: [...cssRoutes, ...componentsRoutes],
+		children: [...cssRoutes, ...componentsRoutes, ...utilsRoutes],
 	},
 	{
 		path: '/err',
